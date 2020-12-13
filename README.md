@@ -12,7 +12,7 @@ Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI,
 
 ### Prerequisites
 
-#### Node.js 12+ (versions below could work, but are not tested)
+#### Node.js
 
 * Linux:
 
@@ -29,12 +29,12 @@ Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI,
 1. Clone the repository
 
    ```
-   git clone https://github.com/samlehman617/developer-portfolio
+   git clone https://github.com/samlehman617/samlehman617.github.io
    ```
 2. Install dependencies, this can take a minute
 
    ```
-   cd react-saas-template
+   cd samlehman617.github.io
    npm install
    ```
 3. Start the local server
@@ -47,11 +47,7 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 
 ### What to do next?
 
-If you are new to React, you should watch a [basic React tutorial](https://www.youtube.com/results?search_query=react+tutorial) first.
-
 If you already know React, then most of the information you need is in the [Material-UI documentation](https://material-ui.com/getting-started/usage/).
-
-You can go into [src/theme.js](/src/theme.js) and change the primary and secondary color codes at the top of the script to the values you like and some magic will happen.
 
 ## Deployment
 
@@ -68,19 +64,8 @@ It will create a folder named build with your compiled project inside. After tha
 * [Create-React-App](https://github.com/facebook/create-react-app) - Used to bootstrap the development
 * [Material-UI](https://github.com/mui-org/material-ui) - Material Design components
 * [React-Router](https://github.com/ReactTraining/react-router) - Routing of the app
-* [Pace](https://github.com/HubSpot/pace) - Loading bar at the top
-* [Emoji-Mart](https://github.com/missive/emoji-mart) - Picker for the emojis
-* [React-Dropzone](https://github.com/react-dropzone/react-dropzone) - File drop component for uploads
-* [Recharts](https://github.com/recharts/recharts) - Charting library I used for the statistics
 * [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
-* [React-Cropper](https://github.com/roadmanfong/react-cropper) - Cropper for the image uploads
-* [React-Stripe-js](https://github.com/stripe/react-stripe-js) - Stripes payment elements
 
-## Things im currently working on
-
-
-
-Show your support by ⭐ the project. Pull requests are always welcome.
 
 ## License
 
