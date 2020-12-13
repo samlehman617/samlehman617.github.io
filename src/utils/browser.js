@@ -41,8 +41,8 @@ export const setManifestColors = (color, bg_color) => {
             "type": "image"
         }
       ],
-      "scope": "https://samlehman.me",
-      "start_url": "https://samlehman.me",
+      "scope": "https://samlehman617.github.io",
+      "start_url": "https://samlehman617.github.io",
       "display": "standalone",
       "theme_color": color == null ? "#000000" : color,
       "background_color": bg_color == null ? "#fff" : bg_color
