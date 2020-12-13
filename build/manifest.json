@@ -1,0 +1,20 @@
+{
+  "short_name": "Sam Lehman",
+  "name": "Sam Lehman - Developer",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#b3294e",
+  "background_color": "#f5f5f5"
+}
