@@ -88,8 +88,6 @@ function Home(props) {
       <Section
         name="Home"
         background={<P5Background sketch='Terrain' />}
-        // background={<P5Background sketch='DVDMenu'/>}
-        // background={<ParallaxSnow />}
         // background={<P5Background sketch='Wavy' />}
         // header={
         //   <WaveHeader
@@ -114,13 +112,14 @@ function Home(props) {
       <Section
         name="About"
         header={<WaveHeader />}
+        background={<P5Background sketch='DVDMenu'/>}
         footer={<WaveFooter />}
       >
         <About />
       </Section>
       <Section
         name="Portfolio"
-        // background={<P5Background sketch='Terrain' />}
+        background={<ParallaxSnow />}
         header={<WaveHeader />}
       >
         <Portfolio />
