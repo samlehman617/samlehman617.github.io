@@ -71,6 +71,27 @@ It will create a folder named build with your compiled project inside. After tha
 * [React-Router](https://github.com/ReactTraining/react-router) - Routing of the app
 * [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
 
+## To-Do
+
+### UI
+- [ ] Fix the faux glass on the project cards so text is legible on any background.
+- [ ] Fix project cards not taking all available grid space.
+- [ ] Fix project cards README not being scrollable when long.
+- [ ] Add tech icons to project card chips.
+- [ ] Show skeleton content before load.
+- [ ] Keep theme switcher actions sticky & always on top.
+- [ ] Allow multiple schemas for theme settings.
+- [ ] Remove unused sections.
+
+### Performance
+- [ ] Move as much CSS out of React code as possible (huge performance hit)
+- [ ] Optimize performance on the p5.js sketches.
+- [ ] Dynamically load as much code as possible.
+- [ ] Prevent FancyText change on every render.
+
+### Major functionality
+- [ ] Implement backend for sam chatbot
+- [ ] Implement frontend for sam chatbot
 
 ## License
 
