@@ -73,15 +73,22 @@ It will create a folder named build with your compiled project inside. After tha
 
 ## To-Do
 
-### UI
+### General UI
 - [ ] Fix the faux glass on the project cards so text is legible on any background.
 - [ ] Fix project cards not taking all available grid space.
 - [ ] Fix project cards README not being scrollable when long.
+- [ ] Make project card title a link.
 - [ ] Add tech icons to project card chips.
-- [ ] Show skeleton content before load.
+- [ ] Show skeleton content on project cards before load.
+- [ ] Make sure all p5.js backgrounds can handle window resize.
+- [ ] Remove unused sections.
+- [ ] Add scroll to next section buttons.
+- [ ] Add scroll to top button.
+
+### Themes
+- [ ] Fix AppBar button text match theme properly.
 - [ ] Keep theme switcher actions sticky & always on top.
 - [ ] Allow multiple schemas for theme settings.
-- [ ] Remove unused sections.
 
 ### Performance
 - [ ] Move as much CSS out of React code as possible (huge performance hit)
@@ -90,8 +97,14 @@ It will create a folder named build with your compiled project inside. After tha
 - [ ] Prevent FancyText change on every render.
 
 ### Major functionality
+- [ ] Re-add my resume.
+- [ ] Move URL to my domain.
 - [ ] Implement backend for sam chatbot
 - [ ] Implement frontend for sam chatbot
+
+### DevOps
+- [ ] Fix GitHub Action
+- [ ] Keep main branch working & switch to development branch
 
 ## License
 
