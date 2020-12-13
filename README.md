@@ -1,13 +1,11 @@
 # React Developer Portfolio
 Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI, and more!
 
-[**Check out the demo**](https://samlehman.dev)
+[**Check out the demo**](https://samlehman.me)
 
-![Node.js CI](https://github.com/samlehman617/developer-portfolio/workflows/Node.js%20CI/badge.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=samlehman617/developer-portfolio)](https://dependabot.com)
+![Node.js CI](https://github.com/samlehman617/samlehman617.github.io/workflows/Node.js%20CI/badge.svg)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=samlehman617/samlehman617.github.io)](https://dependabot.com)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
-[<img src="/.github/gifs/showcase.gif">](https://samlehman.dev "Go to demo website")
 
 
 ## Getting Started
