@@ -5,7 +5,8 @@ import {
   createMuiTheme,
   responsiveFontSizes,
 } from "@material-ui/core";
-import defaultTheme from "./components/theming/themes/Default";
+// import defaultTheme from "./components/theming/themes/Default";
+import defaultTheme from "./components/theming/themes/Void";
 import GlobalStyles from "./GlobalStyles";
 import * as serviceWorker from "./serviceWorker";
 import Pace from "./components/navigation/Pace";
