@@ -20,7 +20,7 @@ function Terrain(p) {
 
     let redraw = false;
     let maxFramerate = 60;
-    let flying = 0;
+    let speed = 0;
     // const createEmptyTerrain = () => {
     const createEmptyTerrain = function() {
         let newTerrain = [];
@@ -54,8 +54,8 @@ function Terrain(p) {
         }
 
         // Controls the speed the terrain passes underneath
-        flying -= 0.2;
-        let yoff = flying;
+        speed -= 0.2;
+        let yoff = speed;
 
         // Generate perlin noise terrain data
         for (let y=0; y<rows; y++) {
