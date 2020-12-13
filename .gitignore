@@ -108,7 +108,7 @@ dist
 
 # build directory
 build/
-docs/**
+# docs/**
 
 #lockfiles
 yarn.lock
