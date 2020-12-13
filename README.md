@@ -89,6 +89,7 @@ It will create a folder named build with your compiled project inside. After tha
 - [ ] Fix AppBar button text match theme properly.
 - [ ] Keep theme switcher actions sticky & always on top.
 - [ ] Allow multiple schemas for theme settings.
+- [ ] Consistent getter/setter functions in props for theme control widgets.
 
 ### Performance
 - [ ] Move as much CSS out of React code as possible (huge performance hit)
@@ -105,6 +106,9 @@ It will create a folder named build with your compiled project inside. After tha
 ### DevOps
 - [ ] Fix GitHub Action
 - [ ] Keep main branch working & switch to development branch
+
+### Documentation
+- [ ] Add screenshot(s) of UI to README
 
 ## License
 
