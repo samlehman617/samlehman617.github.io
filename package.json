@@ -1,0 +1,80 @@
+{
+  "name": "samlehman.dev",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://samlehman.dev",
+  "description": "Personal developer website",
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
+    "@iconify/icons-mdi": "^1.1.1",
+    "@iconify/icons-octicon": "^1.1.0",
+    "@iconify/react": "^1.1.3",
+    "@material-ui/core": "^4.11.1",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/system": "^4.9.14",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.11.0",
+    "aos": "^2.3.4",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.14.0",
+    "dotenv": "^8.2.0",
+    "emoji-mart": "^3.0.0",
+    "javascript-time-ago": "^2.3.3",
+    "js-cookie": "^2.2.0",
+    "p5": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-color": "^2.18.1",
+    "react-cropper": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.4",
+    "react-github-contributions-calendar": "^0.12.0",
+    "react-markdown": "^4.3.1",
+    "react-p5-wrapper": "^2.3.0",
+    "react-pdf": "^4.1.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-use": "^15.3.3",
+    "recharts": "^1.8.5"
+  },
+  "devDependencies": {
+    "@iconify-icons/mdi": "^1.1.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^10.4.5",
+    "@testing-library/user-event": "^12.2.2",
+    "gh-pages": "^3.1.0",
+    "react-scripts": "^4.0.1",
+    "webpack": "^4.44.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samlehman617/developer-portfolio.git"
+  },
+  "author": "samlehman617",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samlehman617/developer-portfolio/issues"
+  }
+}
