@@ -94,7 +94,8 @@ const pickerStyles = (theme) => ({
 });
 
 const ColorSelector = (props) => {
-  const { classes, variant, state, dispatch } = props;
+  // const { classes, variant, state, dispatch } = props;
+  const { classes, variant, } = props;
   // eslint-disable-next-line no-unused-vars
   const [color, setColor, setColorHue, setColorShade] = variant === 'primary' ?
     // eslint-disable-next-line react-hooks/rules-of-hooks

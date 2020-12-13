@@ -10,7 +10,10 @@ import GlobalStyles from "./GlobalStyles";
 import * as serviceWorker from "./serviceWorker";
 import Pace from "./components/navigation/Pace";
 import { ThemeProvider } from './components/theming/context/ThemeContext';
-import { PresetContext, PresetProvider } from "./components/theming/context/PresetContext";
+import {
+  // PresetContext,
+  PresetProvider
+} from "./components/theming/context/PresetContext";
 // TODO: Separate schema to global provider & use instance of section provider for each section.
 import { SchemaProvider } from './components/theming/context/SchemaContext';
 

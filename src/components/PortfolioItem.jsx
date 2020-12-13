@@ -4,56 +4,37 @@ import PropTypes from 'prop-types';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en';
 
-// import Skeleton, {SkeletonTheme} from 'react-loading-skeleton';
-// import Skeleton from 'react-loading-skeleton';
 import ReactMarkdown from 'react-markdown';
 import clsx from 'clsx';
 
 // Material Components
 import {
-  // Avatar,
   Button,
   Card,
-  // CardActionArea,
   CardActions, CardContent, CardMedia, CardHeader,
   Collapse,
-  // Container, Grid,
-  // Icon,
   IconButton,
   Typography,
-  // Slide, Zoom,
-  Badge,
 } from '@material-ui/core';
 import {
-  useTheme,
   makeStyles,
   withStyles,
 } from '@material-ui/core/styles';
-// import { shadows } from '@material-ui/system';
 
 // Icons
-import { Icon, InlineIcon } from "@iconify/react";
+import { InlineIcon } from "@iconify/react";
 import star from "@iconify-icons/mdi/star";
 import repofork from "@iconify-icons/mdi/source-fork";
 import updateIcon from "@iconify-icons/mdi/update";
-import commitIcon from '@iconify-icons/mdi/source-commit';
 import eyeIcon from '@iconify-icons/mdi/eye';
-// import star from "@iconify/icons-octicon/star";
-// import repofork from "@iconify/icons-octicon/repo-forked";
 import CodeIcon from '@material-ui/icons/Code';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import StarIcon from '@material-ui/icons/Star';
-// import VisibilityIcon from '@material-ui/icons/Visibility';
 
 // Components
 import { Typography as FancyText } from './Typography';
 import TechChip from './TechChip';
-import {
-  // marqueeOverflow, isElementOverflowing,
-  elementOverflow
-} from '../utils/text';
+import { elementOverflow } from '../utils/text';
 
 import default_img from '../assets/images/default_project.png';
 
@@ -101,7 +82,6 @@ const useHeaderStyles = makeStyles(theme => ({
 
 const ProjectHeader = props => {
   const classes = useHeaderStyles();
-  const theme = useTheme();
 
   const titleOverflow = useState(false);
   const hover = useState(false);

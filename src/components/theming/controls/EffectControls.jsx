@@ -1,22 +1,28 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  // useContext,
+  // useEffect,
+  useState
+} from 'react';
+
 import PropTypes from 'prop-types';
 import {
-    Accordion, AccordionDetails, AccordionSummary,
-    Button, ButtonGroup,
-    FormControl, FormControlLabel, FormGroup, FormLabel,
+    // Accordion, AccordionDetails, AccordionSummary,
+    // Button, ButtonGroup,
+    FormControl, FormControlLabel,
+    // FormGroup, FormLabel,
     Grid,
-    Input, InputAdornment, InputLabel,
-    MenuItem,
-    ListItemIcon, //as DefaultListItemIcon,
-    ListItemText,
-    Radio,
-    Select,
+    // Input, InputAdornment, InputLabel,
+    // MenuItem,
+    // ListItemIcon, //as DefaultListItemIcon,
+    // ListItemText,
+    // Radio,
+    // Select,
     // Slider, // as DefaultSlider,
     Switch,
     TextField,
     Typography,
     capitalize,
-    useTheme,
+    // useTheme,
     withStyles,
 } from '@material-ui/core';
 import SettingsGroup from './SettingsGroup';
@@ -26,10 +32,10 @@ import {
   // IconMenuItem
 } from '../../IconSelect';
 import Slider from '../../Slider';
-import ColorAvatar from '../../ColorAvatar';
+// import ColorAvatar from '../../ColorAvatar';
 
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import IncreaseIcon from '@material-ui/icons/AddCircleOutline';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import IncreaseIcon from '@material-ui/icons/AddCircleOutline';
 // import DecreaseIcon from '@material-ui/icons/RemoveCircleOutline';
 // import { BackgroundContext, BackgroundProvider } from './BackgroundContext';
 import * as backgrounds from '../../backgrounds';
@@ -121,7 +127,8 @@ const createOptionSelect = (name, value, values, baseId, icons, handler) => {
   );
 
   let items = [];
-  for (const [i, value] of Object.entries(values)) {
+  // for (const [ i, value] of Object.entries(values)) {
+  for (const [, , value] of Object.entries(values)) {
     const id = baseId + "-" + value;
     items.push(createMenuItem(value, null, id));
   }
@@ -146,7 +153,10 @@ const EffectSettingControl = props => {
     id,
     effectName,
     settingName,
-    values, icons, name, setter, min, max, step, description,
+    values, icons,
+    // name, setter,
+    min, max, step,
+    // description,
   } = props;
   console.log(
     "EffectSettingControl:", settingName,
@@ -155,6 +165,7 @@ const EffectSettingControl = props => {
     "\n    All Values:", values,
     "\n Default Value:", values[0],
     "\n          Type:", typeof values[0],
+    "\n          Icon:", Icon,
   );
 
   const type = values.length >= 2 ?
@@ -240,10 +251,10 @@ const effectControlsStyles = (theme) => ({
 const EffectControls = (props) => {
   const { section, controls } = props;
 
-  const [expanded, setExpanded] = useState(true);
-  const handleAccordion = () => {
-    setExpanded(!expanded)
-  }
+  // const [expanded, setExpanded] = useState(true);
+  // const handleAccordion = () => {
+  //   setExpanded(!expanded)
+  // }
   // Use the appropriate type of effects
   const effects =
     controls === 'background' ? backgrounds :
@@ -251,7 +262,8 @@ const EffectControls = (props) => {
         controls === 'footer' ? footers :
           controls === 'mouse' ? null : backgrounds;
 
-  const [effectName, setEffectName] = useState(props.default);
+  // const [effectName, setEffectName] = useState(props.default);
+  const [effectName, ,] = useState(props.default);
   const name = capitalize(effectName);
   // Select our current effect
   const currEffect = effects[name];
@@ -353,10 +365,10 @@ EffectControls.defaultProps = {
 
 export const SectionControls = props => {
   const { section } = props;
-  const [expanded, setExpanded] = useState({ color: true, });
-  const handleExpand = (cat, val) => {
-    setExpanded({ ...expanded, cat: val });
-  }
+  // const [expanded, setExpanded] = useState({ color: true, });
+  // const handleExpand = (cat, val) => {
+  //   setExpanded({ ...expanded, cat: val });
+  // }
   console.log("Section:", section);
 
   return (

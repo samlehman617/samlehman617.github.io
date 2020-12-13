@@ -1,29 +1,31 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import React, {
+    // useEffect, useState
+} from 'react';
+// import PropTypes from 'prop-types';
 import {
-  Accordion, AccordionDetails, AccordionSummary,
+//   Accordion, AccordionDetails, AccordionSummary,
   FormControl,
-  FormLabel,
-  Grid,
+//   FormLabel,
+//   Grid,
   InputLabel,
   MenuItem,
   Select,
-  Typography,
-  capitalize,
-  useTheme,
-  withStyles,
+//   Typography,
+//   capitalize,
+//   useTheme,
+//   withStyles,
 } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ImageIcon from '@material-ui/icons/Image';
-import StopIcon from '@material-ui/icons/Stop';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import ImageIcon from '@material-ui/icons/Image';
+// import StopIcon from '@material-ui/icons/Stop';
 
 // import { SectionControls } from './EffectControls';
-import { SectionControls } from './SectionControls';
+// import { SectionControls } from './SectionControls';
 import { useSchema } from '../context/SchemaContext';
-import { BackgroundContext, BackgroundProvider } from '../context/BackgroundContext';
-import * as footers from '../../footers';
-import * as headers from '../../headers';
-import * as backgrounds from '../../backgrounds';
+// import { BackgroundContext, BackgroundProvider } from '../context/BackgroundContext';
+// import * as footers from '../../footers';
+// import * as headers from '../../headers';
+// import * as backgrounds from '../../backgrounds';
 
 const pages = ["landing", "about", "portfolio", "resume", "features", "pricing" ];
 

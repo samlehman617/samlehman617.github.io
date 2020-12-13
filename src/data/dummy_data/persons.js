@@ -9,7 +9,7 @@ import image8 from "./images/image8.jpg";
 import image9 from "./images/image9.jpg";
 import image10 from "./images/image10.jpg";
 
-export default [
+const persons = [
   {
     profilePicUrl: image1,
     name: "Markus"
@@ -51,3 +51,5 @@ export default [
     name: "Leonie"
   }
 ];
+
+export default persons;

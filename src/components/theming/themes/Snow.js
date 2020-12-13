@@ -1,4 +1,5 @@
-export default {
+// export default {
+const snowTheme = {
     name: 'Snow',
     schema: 'uniform',
     background: {
@@ -54,3 +55,4 @@ export default {
         effect: 'None',
     },
 };
+export default snowTheme;

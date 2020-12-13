@@ -171,6 +171,8 @@ export const capitalize = (str) => {
 export const stringToProperty = (obj, property) => {
   property.split('.').reduce(function (o, key) { return o[key] }, obj);
 };
-export default {
+// export default {
+const textUtils = {
   capitalize, stringToProperty, zalgo, marqueeOverflow, isElementOverflowing, wrapContentsInMarquee, elementOverflow,
 };
+export default textUtils;

@@ -6,14 +6,18 @@ import ReactMarkdown from 'react-markdown';
 import {
   Grid,
   Typography,
-  Card, CardActions, CardActionArea, CardContent, CardHeader, CardMedia,
+  Card, CardActions, CardActionArea, CardContent, CardHeader, 
+  CircularProgress,
   Button, IconButton, Chip, Collapse,
-  makeStyles, withStyles, withTheme, useTheme, darken,
+  makeStyles, withTheme, useTheme, darken,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import CodeIcon from '@material-ui/icons/Code';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
-import { Icon, InlineIcon } from '@iconify/react';
+import {
+  // Icon,
+  InlineIcon
+} from '@iconify/react';
 import starIcon from '@iconify/icons-mdi/star';
 import forkIcon from '@iconify/icons-mdi/source-fork';
 import eyeIcon from '@iconify/icons-mdi/eye';
@@ -286,15 +290,14 @@ const ProjectCard = props => {
     // } else {
       // setStatus('error');
     // }
-    // setLoading(false);
+    setLoading(false);
   }, [repoContent]);
 
   // Download our README content.
   useEffect(() => {
     if (!readmeUrl) return;
     const fetchReadmeContent = async () => {
-      setLoading(true);
-      setStatus('fetching README content');
+      setStatus('fetching README');
       const response = await fetch(readmeUrl, { mode: 'cors'});
       const readmeData = await response.text();
       if (readmeData) setLoading(false);
@@ -314,74 +317,80 @@ const ProjectCard = props => {
         background: `no-repeat top / cover url(${screenshot}) ${theme.palette.primary.dark}`
       }}
     >
-    <CardActionArea
-      className={classes.overlay} 
-      onClick={e => setExpanded(!expanded)}
-      component="div"
-    >
-    <Collapse className={classes.contentCollapse} in={!expanded}>
-      <CardHeader 
-        className={classes.header}
-        title={name}
-        titleTypographyProps={{ variant: "h4", align: 'left' }}
-        subheader={(<Subheader language={language} updated_at={updated_at} />)}
-        subheaderTypographyProps={{ variant: "subtitle1" }}
-        action={(<RepoStats {...props} />)}
-      >
-      </CardHeader>
-      <CardContent className={classes.content}>
-        <Typography paragraph align="left" variant="body1" className={classes.desc}>{description}</Typography>
-        <div className={classes.chips}>
-            {topics
-                .filter(topic => !['portfolio-item', 'hackpsu', 'material-design', 'material'].includes(topic))
-                .map(t => (
-                  <Chip className={classes.chip} variant="outlined" size="small" label={t} key={t}/>
-                ))
-            }
-        </div>
-      </CardContent>
-      </Collapse>
-      <Collapse className={classes.readmeCollapse}
-        in={expanded}
-      >
-            <ReactMarkdown
-              className={classes.readme}
-              // source={readme}
-              escapeHtml={false}
+        {loading ?
+          <CircularProgress className={classes.contentSpinner} /> : (
+            <CardActionArea
+              className={classes.overlay}
+              onClick={e => setExpanded(!expanded)}
+              component="div"
             >
-              {readme}
-            </ReactMarkdown>
-      </Collapse>
-      <CardActions disableSpacing className={classes.actions}>
-        <Button 
-          startIcon={<ExitToAppIcon />}
-          variant="outlined" 
-          className={clsx(classes.actionButton, classes.demoButton)}
-          href={homepage}
-          onClick={e => e.stopPropagation()}
-          onMouseDown={e => e.stopPropagation()}
-        >
-          Demo
+              <Collapse className={classes.contentCollapse} in={!expanded}>
+                <CardHeader
+                  className={classes.header}
+                  title={name}
+                  titleTypographyProps={{ variant: "h4", align: 'left' }}
+                  subheader={(<Subheader language={language} updated_at={updated_at} />)}
+                  subheaderTypographyProps={{ variant: "subtitle1" }}
+                  action={(<RepoStats {...props} />)}
+                >
+                </CardHeader>
+                <CardContent className={classes.content}>
+                  <Typography paragraph align="left" variant="body1" className={classes.desc}>{description}</Typography>
+                  <div className={classes.chips}>
+                    {topics
+                      .filter(topic => !['portfolio-item', 'hackpsu', 'material-design', 'material'].includes(topic))
+                      .map(t => (
+                        <Chip className={classes.chip} variant="outlined" size="small" label={t} key={t} />
+                      ))
+                    }
+                  </div>
+                </CardContent>
+              </Collapse>
+              { status !== 'fetched README' ? <CircularProgress className={classes.readmeSpinner} /> : (
+
+              <Collapse className={classes.readmeCollapse}
+                in={expanded}
+              >
+                <ReactMarkdown
+                  className={classes.readme}
+                  // source={readme}
+                  escapeHtml={false}
+                >
+                  {readme}
+                </ReactMarkdown>
+              </Collapse>
+              )}
+              <CardActions disableSpacing className={classes.actions}>
+                <Button
+                  startIcon={<ExitToAppIcon />}
+                  variant="outlined"
+                  className={clsx(classes.actionButton, classes.demoButton)}
+                  href={homepage}
+                  onClick={e => e.stopPropagation()}
+                  onMouseDown={e => e.stopPropagation()}
+                >
+                  Demo
         </Button>
-        <Button 
-          startIcon={<CodeIcon />}
-          variant="outlined" 
-          className={clsx(classes.actionButton, classes.codeButton)}
-          href={html_url}
-          onClick={e => e.stopPropagation()}
-          onMouseDown={e => e.stopPropagation()}
-        >
-          Code
+                <Button
+                  startIcon={<CodeIcon />}
+                  variant="outlined"
+                  className={clsx(classes.actionButton, classes.codeButton)}
+                  href={html_url}
+                  onClick={e => e.stopPropagation()}
+                  onMouseDown={e => e.stopPropagation()}
+                >
+                  Code
         </Button>
-        <IconButton 
-          className={clsx(classes.expandButton, {[classes.expandedButton]: expanded})}
-          onClick={e => {e.stopPropagation(); console.log(readme); setExpanded(!expanded);}}
-          onMouseDown={e => e.stopPropagation()}
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-    </CardActionArea>
+                <IconButton
+                  className={clsx(classes.expandButton, { [classes.expandedButton]: expanded })}
+                  onClick={e => { e.stopPropagation(); console.log(readme); setExpanded(!expanded); }}
+                  onMouseDown={e => e.stopPropagation()}
+                >
+                  <ExpandMoreIcon />
+                </IconButton>
+              </CardActions>
+            </CardActionArea>
+          )}
     </Card>
     </Grid>
   )

@@ -10,8 +10,8 @@ import {
     // useTheme,
     withStyles,
 } from '@material-ui/core';
-import { SectionThemeProvider, SectionContexts } from '../theming/context/SectionContext';
-import { usePreset } from '../theming/context/PresetContext';
+// import { SectionThemeProvider, SectionContexts } from '../theming/context/SectionContext';
+// import { usePreset } from '../theming/context/PresetContext';
 import { useSchema } from '../theming/context/SchemaContext';
 import { debug } from '../../App';
 
@@ -114,7 +114,7 @@ const Section = props => {
     navbarOffset,
   } = props;
 
-  const [presetUse, presetName,] = usePreset();
+  // const [presetUse, presetName,] = usePreset();
   const [schema,] = useSchema();
   // const theme = useTheme();
 
@@ -132,7 +132,7 @@ const Section = props => {
     console.log("Size:", size);
     console.log("Offset", navbarOffset);
   }
-  let context;
+  // let context;
   switch (schema) {
     // Uniform
     case 1:

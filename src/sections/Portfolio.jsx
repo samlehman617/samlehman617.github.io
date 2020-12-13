@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 // Components
 // import { Typography as FancyText } from '../components/Typography';
-import PortfolioItem from '../components/PortfolioItem';
+// import PortfolioItem from '../components/PortfolioItem';
 import ProjectCard from '../components/ProjectCard';
 // import ScrollToNext from '@components/ScrollToNext';
-import GithubCalendar from 'react-github-contributions-calendar';
-import ReactTooltip from 'react-tooltip';
+// import GithubCalendar from 'react-github-contributions-calendar';
+// import ReactTooltip from 'react-tooltip';
 
 // Material Components
-import { Card, CardContent, CircularProgress, Grid, Typography, makeStyles, } from '@material-ui/core';
+import {
+  // Card, CardContent,
+  CircularProgress, Grid, Typography, makeStyles,
+} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {

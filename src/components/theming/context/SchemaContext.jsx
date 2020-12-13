@@ -3,12 +3,12 @@ import React, {
   useCallback,
   useContext,
   useEffect,
-  useReducer,
+  // useReducer,
   useState,
 } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { capitalize } from '@material-ui/core';
+// import { capitalize } from '@material-ui/core';
 import { usePreset } from './PresetContext';
 import * as presets from '../themes';
 
@@ -21,7 +21,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 export const SchemaProvider = props => {
   const { children } = props;
-  const [presetUse, presetName, setPresetUse, setPresetName] = usePreset();
+  // const [presetUse, presetName, setPresetUse, setPresetName] = usePreset();
+  const [presetUse, presetName, , ,] = usePreset();
 
   // Get initial value
   let initialSchema;

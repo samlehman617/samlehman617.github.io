@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+// import React from 'react';
+// import PropTypes from 'prop-types';
+import {
+  withStyles,
+  // makeStyles
+} from '@material-ui/core/styles';
 import { Slider as DefaultSlider } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
+// import Typography from '@material-ui/core/Typography';
+// import Tooltip from '@material-ui/core/Tooltip';
 
 
 export const Slider = withStyles(({ palette, spacing }) => ({

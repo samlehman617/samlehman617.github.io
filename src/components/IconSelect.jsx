@@ -102,4 +102,8 @@ export const IconSelect = props => {
     </FormControl>
   );
 };
+IconSelect.propTypes = {
+  baseId: PropTypes.string,
+  value: PropTypes.string,
+};
 export default IconSelect;

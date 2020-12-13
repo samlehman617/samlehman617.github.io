@@ -100,7 +100,7 @@ function Selector(props) {
     setIsCookieRulesDialogOpen(false);
   }, [setIsCookieRulesDialogOpen]);
 
-  useEffect(fetchBlogPosts, []);
+  useEffect(fetchBlogPosts);
 
   return (
     <div className={classes.wrapper}>

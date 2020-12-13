@@ -16,14 +16,14 @@ import FormatPaintIcon from '@material-ui/icons/FormatPaint';
 import SaveIcon from '@material-ui/icons/Save';
 
 import BackgroundTool from './controls/BackgroundTool';
-import ColorSelector from './controls/ColorPicker';
-import DensitySwitcher from './controls/DensitySwitcher';
+// import ColorSelector from './controls/ColorPicker';
+// import DensitySwitcher from './controls/DensitySwitcher';
 import PaletteTypeSwitcher from './controls/PaletteTypeSwitcher';
 import PresetSwitcher, { PresetToggle } from './controls/PresetSwitcher';
-import PaperTypeSwitcher from './controls/PaperTypeSwitcher';
+// import PaperTypeSwitcher from './controls/PaperTypeSwitcher';
 import SchemaSwitcher from './controls/SchemaSwitcher';
-import SpacingSwitcher from './controls/SpacingSwitcher';
-import ShapeSwitcher from './controls/ShapeSwitcher';
+// import SpacingSwitcher from './controls/SpacingSwitcher';
+// import ShapeSwitcher from './controls/ShapeSwitcher';
 
 import { usePreset } from './context/PresetContext';
 import Typography from '../Typography';
@@ -82,11 +82,11 @@ const ThemeMenu = props => {
             <BackgroundTool />
         </Collapse>
       </DialogContent>
-      {/* <DialogActions>
+      <DialogActions>
         <Button variant="text"      color="secondary" onClick={props.handleClose}>Cancel</Button>
         <Button variant="outlined"  color="secondary" startIcon={<CasinoIcon />} >Random</Button>
         <Button variant="contained" color="primary"   startIcon={<SaveIcon />}   >Save</Button>
-      </DialogActions> */}
+      </DialogActions>
     </Dialog>
   );
 };

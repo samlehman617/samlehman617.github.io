@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, {
+  // useEffect,
+  useState
+} from 'react';
 import PropTypes from 'prop-types';
 import {
-  Accordion, AccordionDetails, AccordionSummary,
-  FormControl,
-  FormLabel,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-  capitalize,
-  useTheme,
+  // Accordion, AccordionDetails, AccordionSummary,
+  // FormControl,
+  // FormLabel,
+  // Grid,
+  // InputLabel,
+  // MenuItem,
+  // Select,
+  // Typography,
+  // capitalize,
+  // useTheme,
   withStyles,
 } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ImageIcon from '@material-ui/icons/Image';
-import StopIcon from '@material-ui/icons/Stop';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import ImageIcon from '@material-ui/icons/Image';
+// import StopIcon from '@material-ui/icons/Stop';
 
 // import { SectionControls } from './EffectControls';
 // import { BackgroundContext, BackgroundProvider} from '../context/BackgroundContext';
@@ -25,7 +28,7 @@ import * as footers from '../../footers';
 import * as headers from '../../headers';
 import * as backgrounds from '../../backgrounds';
 
-const pages = ["landing", "about", "portfolio", "resume", "features", "pricing" ];
+// const pages = ["landing", "about", "portfolio", "resume", "features", "pricing" ];
 
 const defaultPage = (name) => ({
   name: name,
@@ -45,10 +48,11 @@ const styles = (theme) => ({
 });
 
 function BackgroundTool(props) {
-  const { classes } = props;
-  const theme = useTheme();
+  // const { classes } = props;
+  // const theme = useTheme();
 
-  const [schema, setSchema] = useSchema(1);
+  // const [schema, setSchema] = useSchema(1);
+  const [schema, ,] = useSchema(1);
 
   console.log(
     "BackgroundTool:", schema,

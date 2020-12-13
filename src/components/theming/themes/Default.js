@@ -1,4 +1,5 @@
-export default {
+// export default {
+const defaultTheme = {
     name: 'Default',
     schema: 'uniform',
     background: {
@@ -62,3 +63,4 @@ export default {
         effect: 'None',
     },
 };
+export default defaultTheme;

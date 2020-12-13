@@ -23,8 +23,20 @@ const style = (theme) => ({
 
 const PaperTypeSwitcher = (props) => {
     const { classes } = props;
-    const [paper, setPaper, setPaperMaterial, setPaperElevation, setPaperOpacity, setPaperBlur ] = usePaper();
-    const {material, elevation, opacity, blur} = paper;
+    const [
+        paper,
+        , , // setPaper,
+        setPaperMaterial,
+        , , // setPaperElevation,
+        , , // setPaperOpacity,
+        , , // setPaperBlur
+    ] = usePaper();
+    const {
+        material,
+        // elevation,
+        // opacity,
+        // blur
+    } = paper;
     return (
         <FormControl
             fullWidth

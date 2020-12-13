@@ -3,12 +3,12 @@ import React, {
     useCallback,
     useContext,
     useEffect,
-    useReducer,
+    // useReducer,
     useState,
 } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
-import { capitalize } from '@material-ui/core';
+// import { capitalize } from '@material-ui/core';
 import { usePreset } from './PresetContext';
 import * as presets from '../themes';
 
@@ -19,59 +19,61 @@ if (process.env.NODE_ENV !== 'production') {
     BackgroundContext.displayName = 'BackgroundContext';
 }
 
-const mergeSavedWithPreset = (presetName = 'Default') => {
-    const preset = presets[capitalize(presetName)];
-    return { ...preset.background, ...Cookies.getJSON("background") };
-};
+// const mergeSavedWithPreset = (presetName = 'Default') => {
+//     const preset = presets[capitalize(presetName)];
+//     return { ...preset.background, ...Cookies.getJSON("background") };
+// };
 
-const sectObj = {
-    name: 'default section',
-    layout: 'content',
-    colors: {
-        primary: 'primary',
-        secondary: 'secondary',
-        paper: 'paper',
-        background: 'background',
-    },
-    background: {
-        base: {
-            type: 'solid',       // solid | gradient | image
-            args: {},            // color | color,color2 | color?,(path|name)
-        },
-        effect: {
-            type: 'hilbert',
-            args: {}
-        },
-        header: {
-            type: 'wave',
-            args: {},
-        },
-        footer: {
-            type: 'wave',
-            args: {},
-        },
-    },
-    paper: {
-        material: 'paper',
-        opacity: 1.0,
-        elevation: 8,
-        blur: 0.0,
-    }
-}
-const bgObj = {
-    schema: 'all unique',
-    first: {},
-    last: {},
-    odd: {},
-    even: {},
-    mid: [],
-};
+// const sectObj = {
+//     name: 'default section',
+//     layout: 'content',
+//     colors: {
+//         primary: 'primary',
+//         secondary: 'secondary',
+//         paper: 'paper',
+//         background: 'background',
+//     },
+//     background: {
+//         base: {
+//             type: 'solid',       // solid | gradient | image
+//             args: {},            // color | color,color2 | color?,(path|name)
+//         },
+//         effect: {
+//             type: 'hilbert',
+//             args: {}
+//         },
+//         header: {
+//             type: 'wave',
+//             args: {},
+//         },
+//         footer: {
+//             type: 'wave',
+//             args: {},
+//         },
+//     },
+//     paper: {
+//         material: 'paper',
+//         opacity: 1.0,
+//         elevation: 8,
+//         blur: 0.0,
+//     }
+// }
+// const bgObj = {
+//     schema: 'all unique',
+//     first: {},
+//     last: {},
+//     odd: {},
+//     even: {},
+//     mid: [],
+// };
 
 export const BackgroundProvider = props => {
   const { children } = props;
-  const [presetUse, presetName, setPresetUse, setPresetName] = usePreset();
+//   const [presetUse, presetName, setPresetUse, setPresetName] = usePreset();
+  const [presetUse, presetName, ...rest] = usePreset();
   let initialSchema;
   if (presetUse) {
+      if (presetName === 'debug') console.log("BackgroundProvider:", rest);
     initialSchema = presets[presetName].schema;
   } else {
     initialSchema = Cookies.get("schema");

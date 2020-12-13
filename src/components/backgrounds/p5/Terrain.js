@@ -1,5 +1,5 @@
 import { hextoRGB } from '../../../utils/color';
-import { debug } from '../../../App';
+// import { debug } from '../../../App';
 
 // const Terrain = p => {
 function Terrain(p) {
@@ -19,7 +19,7 @@ function Terrain(p) {
     let thickness = 1;
 
     let redraw = false;
-    let maxFramerate = 60;
+    let maxFramerate = 30;
     let speed = 0;
     // const createEmptyTerrain = () => {
     const createEmptyTerrain = function() {
@@ -39,7 +39,7 @@ function Terrain(p) {
     p.setup = function() {
         while (p === undefined) { console.log('Waiting for p...') }
         p.createCanvas(width / 2, height / 2, p.WEBGL);
-        p.frameRate(24);
+        p.frameRate(maxFramerate);
         p.strokeWeight(thickness);
         p.stroke(colorCount === 2 ? p.color(...primaryColor) : p.color(...secondaryColor));
         p.fill(p.color(...secondaryColor, transparency));

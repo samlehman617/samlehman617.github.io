@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {
-    Accordion, AccordionActions, AccordionDetails, AccordionSummary,
+  Accordion,
+  // AccordionActions,
+  AccordionDetails, AccordionSummary,
     Badge,
     Typography,
     capitalize,
@@ -36,7 +38,8 @@ export const SettingsGroup = (props) => {
   const classes = useStyles();
   const { children, name, open } = props;
   const [expanded, setExpanded] = useState(open);
-  const [changed, setChanged] = useState(false);
+  // const [changed, setChanged] = useState(false);
+  const [changed, ,] = useState(false);
   const handleExpand = () => {
       setExpanded(!expanded);
   };

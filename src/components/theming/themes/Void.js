@@ -1,4 +1,5 @@
-export default {
+// export default {
+const voidTheme = {
     name: 'Void',
     schema: 'uniform',
     background: {
@@ -55,3 +56,4 @@ export default {
         effect: 'zalgo',
     },
 };
+export default voidTheme;

@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
-    FormControl, FormControlLabel, FormGroup,
+    FormControl, FormControlLabel,
+    // FormGroup,
     InputLabel,
     MenuItem,
     Select,
@@ -34,7 +35,8 @@ export const PresetToggle = (props) => {
 };
 const PresetSwitcher = (props) => {
     const { classes } = props;
-    const [use, name, setUse, setName] = usePreset();
+    // const [use, name, setUse, setName] = usePreset();
+    const [use, name, , setName] = usePreset();
 
     console.log("PresetSwitcher: use =", use, "name =", name);
     return (

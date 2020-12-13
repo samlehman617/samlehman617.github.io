@@ -147,7 +147,7 @@ function AddPostOptions(props) {
     );
   }, [onDrop, files, classes, deleteItem]);
 
-  const inputs = useCallback(
+  const inputs = useCallback(() =>
     [
       {
         state: option1,

@@ -10,7 +10,7 @@ import CasinoIcon from '@material-ui/icons/Casino';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import SaveIcon from '@material-ui/icons/Save';
 
-import { useSchema } from '../context/SchemaContext';
+// import { useSchema } from '../context/SchemaContext';
 
 import SettingsGroup from './SettingsGroup';
 
@@ -40,11 +40,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const SectionControls = props => {
-  const { section, setter, index } = props;
+  const {
+    section,
+    // setter,
+    index
+  } = props;
   const classes = useStyles();
 
   const [expanded, setExpanded] = useState(index === 0);
-  const [changes, setChanges] = useState(0);
+  // const [changes, setChanges] = useState(0);
   const handleExpand = () => setExpanded(!expanded);
   console.log("Section:", section);
 

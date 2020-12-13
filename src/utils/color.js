@@ -84,10 +84,12 @@ export function buildPalette(mode, primary, secondary, paper, background) {
   return palette;
 };
 
-export default {
+// export default {
+const colorUtils = {
   LightenDarkenColor,
   hextoRGB,
   hextoRGBA,
   buildColor,
   buildPalette,
 };
+export default colorUtils;

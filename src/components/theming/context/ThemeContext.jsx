@@ -5,13 +5,13 @@ import React, {
     useEffect,
     useMemo,
     useReducer,
-    useState,
+    // useState,
 } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import {
     ThemeProvider as MuiThemeProvider,
-    capitalize,
+    // capitalize,
     createMuiTheme,
     responsiveFontSizes,
     useMediaQuery,
@@ -46,7 +46,7 @@ if (process.env.NODE_ENV !== 'production') {
   // PresetContext.displayName = 'PresetDispatchContext';
 }
 
-const useEnhancedEffect = typeof window === 'undefined' ? useEffect : React.useLayoutEffect;
+// const useEnhancedEffect = typeof window === 'undefined' ? useEffect : React.useLayoutEffect;
 
 /**
  * Builds object to initialize ThemeProvider with.
@@ -120,7 +120,9 @@ const buildColor = (hue, shade, opacity) => {
  * @param {string} props.defaultThemeName The name to select the default theme.
  */
 export function ThemeProvider(props) {
-    const { children, defaultThemeName } = props;
+    const { children,
+        // defaultThemeName
+    } = props;
 
     // Use preset to select other values
     const [presetUse, presetName, setUsePreset, setPresetName] = usePreset();
@@ -128,7 +130,10 @@ export function ThemeProvider(props) {
     // Get the initial values using preset and cookies.
     const initialThemeValues = getInitialValues(presetUse, presetName);
     useEffect(() => {
-        console.log("ThemeContext: PresetUse =", presetUse);
+        console.log("ThemeContext:",
+            "\nPresetUse = ", presetUse,
+            "\nPresetName = ", presetName
+        );
         if (presetUse) {
             Cookies.set("theme", presets[presetName]);
         } else {
@@ -142,6 +147,7 @@ export function ThemeProvider(props) {
         console.log("DISPATCH:", action.type, action.payload);
         switch (action.type) {
             case 'SET_PRESET': { setUsePreset(true); return presets[action.payload] || old; }
+            case 'SET_PRESET_NAME': { setPresetName(action.payload); return presets[action.payload] || old; }
             // case 'SET_PRESET': { setUsePreset(true); setPresetName(action.payload); return presets[action.payload] || old; }
             case 'SET_MODE': return { ...old, paletteType: action.payload || old.paletteType };
             case 'SET_DENSE': return { ...old, dense: action.payload };
@@ -247,11 +253,13 @@ export function ThemeProvider(props) {
         "Primary:  ", primaryHue, primaryShade, colors[primaryHue][primaryShade],
         "Secondary:", secondaryHue, secondaryShade, colors[secondaryHue][secondaryShade],
     );
-    const palette = {
-        type: mode,
-        primary:   buildColor(primaryHue,   primaryShade,   paper.opacity),
-        secondary: buildColor(secondaryHue, secondaryShade, paper.opacity),
-    };
+    const palette = useMemo(() => {
+        return {
+            type: mode,
+            primary: buildColor(primaryHue, primaryShade, paper.opacity),
+            secondary: buildColor(secondaryHue, secondaryShade, paper.opacity),
+        }
+    }, [mode, primaryHue, primaryShade, paper.opacity, secondaryHue, secondaryShade]);
 
     console.log("palette", palette);
 

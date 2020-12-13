@@ -79,7 +79,8 @@ export function usePreset() {
     ];
 };
 export function usePresetToggle() {
-    const [usePreset, presetName, setUse, setName] = useContext(PresetContext);
+    // const [usePreset, presetName, setUse, setName] = useContext(PresetContext);
+    const [usePreset, , setUse, ,] = useContext(PresetContext);
     return [
         usePreset,
         useCallback(() => setUse(!usePreset), [setUse, usePreset])

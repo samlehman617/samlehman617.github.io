@@ -1,17 +1,17 @@
 import React, {
-    createContext,
-    useCallback,
+    // createContext,
+    // useCallback,
     useContext,
-    useEffect,
+    // useEffect,
     useMemo,
     useReducer,
-    useState,
+    // useState,
 } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import {
     ThemeProvider as MuiThemeProvider,
-    capitalize,
+    // capitalize,
     createMuiTheme,
     responsiveFontSizes,
     useMediaQuery,
@@ -19,11 +19,11 @@ import {
 // import { useThemeMode } from './SectionContext';
 import { useThemeMode } from './ThemeContext';
 import { buildColor, buildPalette } from '../../../utils/color';
-import * as colors from '@material-ui/core/colors';
+// import * as colors from '@material-ui/core/colors';
 import * as presets from '../themes';
 import highDensity from '../options/density/high';
-import { languageMap } from '../options/languages';
-import { usePreset } from './PresetContext';
+// import { languageMap } from '../options/languages';
+// import { usePreset } from './PresetContext';
 const defaultPreset = presets['Default'];
 
 // Create a new context type for themes
@@ -35,10 +35,14 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const SectionThemeProvider = props => {
-    const { children, index, name } = props;
+    const {
+        children,
+        // index,
+        // name
+    } = props;
 
     // Use preset to select other values
-    const [presetUse, presetName, ] = usePreset();
+    // const [presetUse, presetName, ] = usePreset();
     const [paletteType, ] = useThemeMode();
 
     // TODO: Set initial values.
@@ -125,6 +129,12 @@ const SectionThemeProvider = props => {
 
     // Build Material-UI theme from theme object
     const theme = useMemo(() => {
+        console.log(
+            "Building new Material-UI theme...",
+            "\nBackground:", background,
+            "\nHeader:", header,
+            "\nFooter:", footer
+        );
         const nextTheme = createMuiTheme({
             palette,
             shape: paper.borderRadius,
@@ -147,6 +157,9 @@ const SectionThemeProvider = props => {
         // direction,
         // shape,
         // language,
+        background,
+        header,
+        footer,
     ]);
     const values = { state, dispatch };
 
