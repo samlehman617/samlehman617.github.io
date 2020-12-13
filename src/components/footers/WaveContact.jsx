@@ -19,6 +19,13 @@ import transitions from "@material-ui/core/styles/transitions";
 import WaveBorder from "./Wave";
 import ColoredButton from "../ColoredButton";
 
+const StyledTextField = withStyles(theme => ({
+  root: {
+    backgroundColor: theme.palette.secondary.main,
+    borderColor: theme.palette.type === 'dark' ? theme.palette.common.black : theme.palette.common.white,
+    color: theme.palette.type === 'dark' ? theme.palette.common.black : theme.palette.common.white,
+  }
+}))(TextField);
 const styles = theme => ({
   footerInner: {
     backgroundColor: theme.palette.secondary.main,
@@ -72,9 +79,8 @@ const styles = theme => ({
       color: theme.palette.primary.light
     }
   },
-  textbox: {
+  messageInput: {
     // backgroundColor: theme.palette.type === 'dark' ? theme.palette.background.default : theme.palette.common.white
-    backgroundColor: theme.palette.secondary.main,
   }
 });
 
@@ -158,6 +164,7 @@ const socialIcons = [
 
 function ContactFooter(props) {
   const { classes, theme, width } = props;
+  const textColor = theme.palette.type === 'dark' ? theme.palette.common.black : theme.palette.common.white;
   return (
     <footer className="lg-p-top">
       <WaveBorder
@@ -171,19 +178,19 @@ function ContactFooter(props) {
             <form>
               <Box display="flex" flexDirection="column">
                 <Box mb={1}>
-                  <TextField
+                  <StyledTextField
                     variant="outlined"
                     multiline
-                    placeholder="Get in touch with Sam"
+                    placeholder="Get in touch with me!"
                     inputProps={{ "aria-label": "Get in Touch" }}
-                    InputProps={{className: classes.textbox}}
+                    // InputProps={{className: classes.messageInput}}
                     rows={4}
                     fullWidth
                     required
                   />
                 </Box>
                 <ColoredButton
-                  color={theme.palette.common.white}
+                  color={textColor}
                   variant="outlined"
                   type="submit"
                 >
@@ -224,11 +231,12 @@ function ContactFooter(props) {
           </Hidden>
           <Grid item xs={12} md={6} lg={4}>
             <Typography variant="h6" paragraph className="text-white">
-              About Sam
+              About Sam Lehman
             </Typography>
             <Typography style={{ color: theme.palette.common.white }} paragraph>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-              euismod convallis velit, eu auctor lacus vehicula sit amet.
+              I am a full-stack developer with an expertise in React.js, 
+              Python, Docker, and much much more! Get in contact or visit me 
+              elsewhere on the web to learn more!
             </Typography>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (

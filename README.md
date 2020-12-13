@@ -80,7 +80,7 @@ It will create a folder named build with your compiled project inside. After tha
 ### Content
 - [ ] Add resume section.
 - [ ] Add GitHub contributions calendar.
-- [ ] Remove footer lorem ipsum.
+- [x] Update footer lorem ipsum.
 - [ ] Remove unused sections.
 
 ### UI
