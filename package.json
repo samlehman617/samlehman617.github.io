@@ -72,11 +72,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samlehman617/developer-portfolio.git"
+    "url": "git+https://github.com/samlehman617/samlehman617.github.io.git"
   },
   "author": "samlehman617",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samlehman617/developer-portfolio/issues"
+    "url": "https://github.com/samlehman617/samlehman617.github.io/issues"
   }
 }
