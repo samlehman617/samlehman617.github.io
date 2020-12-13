@@ -1,7 +1,7 @@
 # React Developer Portfolio
 Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI, and more!
 
-[**Check out the demo**](https://samlehman.me)
+[**Check out the demo**](https://samlehman617.github.io)
 
 ![Node.js CI](https://github.com/samlehman617/samlehman617.github.io/workflows/Node.js%20CI/badge.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=samlehman617/samlehman617.github.io)](https://dependabot.com)
@@ -14,7 +14,7 @@ Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI,
 
 #### Node.js
 
-* Linux:
+* Debian-based Linux:
 
    ```
    sudo apt install nodejs npm
@@ -45,16 +45,21 @@ Sam Lehman's developer portfolio. Built with React, Webpack, Babel, Material-UI,
 
 Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser. Editing files will automatically refresh the page.
 
-### What to do next?
+### What next?
 
-If you already know React, then most of the information you need is in the [Material-UI documentation](https://material-ui.com/getting-started/usage/).
+You should know React.js and Material-UI as those are the two main libraries this site uses.
+
+* [React Documentation](https://reactjs.org/docs/getting-started.html)
+* [Material-UI documentation](https://material-ui.com/getting-started/usage/).
 
 ## Deployment
 
-If you are happy with the state of your website you can run:
+This repository has a GitHub Action in `.github/workflows/nodejs.yml` that deploys a new build when you commit to the `main` branch. The Action expects the built static files to be located in the `docs` directory.
+
+To deploy the site manually, run:
 
 ```
-npm run build 
+npm run deploy 
 ```
 
 It will create a folder named build with your compiled project inside. After that copy its content into your webroot and you are ready to go.
