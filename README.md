@@ -72,39 +72,61 @@ It will create a folder named build with your compiled project inside. After tha
 * [Aos](https://github.com/michalsnik/aos) - Animations based on viewport
 
 ## To-Do
+### Major functionality
+- [ ] Move URL to my domain.
+- [ ] Implement backend for sam chatbot
+- [ ] Implement frontend for sam chatbot
 
-### General UI
+### Content
+- [ ] Add resume section.
+- [ ] Add GitHub contributions calendar.
+- [ ] Remove footer lorem ipsum.
+- [ ] Remove unused sections.
+
+### UI
+#### General UI
 - [ ] Fix the faux glass on the project cards so text is legible on any background.
 - [ ] Fix project cards not taking all available grid space.
 - [ ] Fix project cards README not being scrollable when long.
+- [ ] Fix pace component never disappearing.
 - [ ] Make project card title a link.
 - [ ] Add tech icons to project card chips.
-- [ ] Show skeleton content on project cards before load.
-- [ ] Make sure all p5.js backgrounds can handle window resize.
-- [ ] Remove unused sections.
 - [ ] Add scroll to next section buttons.
 - [ ] Add scroll to top button.
 
-### Themes
-- [ ] Fix AppBar button text match theme properly.
-- [ ] Keep theme switcher actions sticky & always on top.
+#### Theme Backend
 - [ ] Allow multiple schemas for theme settings.
+- [ ] Force context managers to exclusively derive state from cookie & defaults.
+- [ ] Implement `current_theme` and `next_theme` where controls affect `next_theme`
+- [ ] Move themes from `src/components/theming/themes` to `src/data/themes`
+- [ ] Subdivide themes into components and build top-level themes from them.
+
+#### Theme Animated Page Elements
+- [ ] Make WaveHeader/WaveFooter use higher resolution for curvature.
+- [ ] Make sure all p5.js backgrounds can handle window resize.
+- [ ] Make sure all p5.js backgrounds can handle prop changes.
+
+#### Theme Setting Controls
+- [ ] Keep theme switcher action button row sticky & always on top.
 - [ ] Consistent getter/setter functions in props for theme control widgets.
+- [ ] Configure theme controls to only update context when save button clicked.
+
+#### Theme Coverage
+- [ ] Fix AppBar button text match theme properly.
+- [ ] Make AppBar shadow match theme when scrolled to top.
+- [ ] Make footer content aware of footer background and adapt content styles.
 
 ### Performance
 - [ ] Move as much CSS out of React code as possible (huge performance hit)
 - [ ] Optimize performance on the p5.js sketches.
 - [ ] Dynamically load as much code as possible.
 - [ ] Prevent FancyText change on every render.
-
-### Major functionality
-- [ ] Re-add my resume.
-- [ ] Move URL to my domain.
-- [ ] Implement backend for sam chatbot
-- [ ] Implement frontend for sam chatbot
+- [ ] Cache data from GitHub API.
+- [ ] Add loading spinners/skeletons for unloaded content.
 
 ### DevOps
 - [ ] Fix GitHub Action
+- [ ] Cache NPM deps?
 - [ ] Keep main branch working & switch to development branch
 
 ### Documentation
